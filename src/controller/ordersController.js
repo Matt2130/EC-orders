@@ -43,7 +43,7 @@ export const getOrder = async (req, res) => {
 
 // update order with id
 export const updateOrder = async (req, res) => {
-    const allowedFields = ['paymentStatus', 'deliveryDate', 'status'];
+    const allowedFields = ['paymentStatus', 'deliveryDate', 'paymentMethod'];
     const invalidFields = Object.keys(req.body).filter(field => !allowedFields.includes(field));
 
     if (invalidFields.length > 0) {
